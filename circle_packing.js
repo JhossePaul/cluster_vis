@@ -56,9 +56,7 @@ d3.csv("clusters.csv").then((data) => {
 
   zoomTo([root.x, root.y, root.r * 2 + margin], width);
 
-  svg
-    .style("background", color(-1))
-    .on("click", function() { zoom(root); });
+  svg.on("click", function() { zoom(root); });
 
   function zoomTo(v) {
     const k = width / v[2];
